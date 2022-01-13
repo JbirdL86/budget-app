@@ -1,8 +1,8 @@
 class Group < ApplicationRecord
   belongs_to :user
-  belongs_to :activity
 
-  has_many :activities, dependent: :destroy
+  has_many :activities_groups
+  has_many :activities, through: :activities_groups, dependent: :destroy
 
   validates :name, presence: true
   validates :icon, presence: true
