@@ -6,5 +6,11 @@ class CreateActivities < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+  
+    change_table :activities do |t|
+      add_reference :activities, :author, null: false, foreign_key: {to_table: :users}
+    end
   end
+
+  
 end
