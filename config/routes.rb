@@ -3,9 +3,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :groups do
-    resources :activities
-  end
+  resources :activities
+  resources :groups
 
   root "groups#index"
 end
