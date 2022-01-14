@@ -21,6 +21,17 @@
     <%= form.text_field :amount %>
   </div>
 
+  <% if @groups.empty? %>
+    <p>No groups to show</p>
+  <% else %>
+    <div class="form-group">
+      <label for="group" class="form-label">Group</label>
+      <%= form.select :group_id, @groups.map { |group| [ group.id]} ,class: "form-control" %>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :author_id, value: current_user.id %>
+
   <div class="actions">
     <%= form.submit %>
   </div>

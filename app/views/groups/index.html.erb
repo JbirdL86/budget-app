@@ -14,11 +14,11 @@
   <tbody>
     <% @groups.each do |group| %>
       <tr>
-        <td><%= group.name %></td>
+        <td><%= link_to group.name, group_path(group) %></td>
         <td><%= group.icon %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>Total amount: <%= total_amount(group.activities) %></td>
+        <td>Number of items: <%= group.activities.length %></td>
+        <td>Date added: <%= group.created_at.strftime('%d %b %Y')  %></td>
       </tr>
     <% end %>
   </tbody>

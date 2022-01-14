@@ -5,8 +5,8 @@ ruby '3.0.1'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-gem 'devise'
 gem 'cancancan'
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
