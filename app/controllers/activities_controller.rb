@@ -1,11 +1,10 @@
 class ActivitiesController < ApplicationController
+  load_and_authorize_resource
   before_action :set_activity, only: %i[ show edit update destroy ]
 
   # GET /activities or /activities.json
   def index
     redirect_to new_activity_path
-    # @activities = current_user.activities.all.order(created_at: :DESC)
-    # @group = Group.find_by_id(params[:group_id])
   end
 
   # GET /activities/1 or /activities/1.json
