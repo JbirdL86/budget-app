@@ -3,7 +3,9 @@ class ActivitiesController < ApplicationController
 
   # GET /activities or /activities.json
   def index
-    @activities = Activity.all
+    redirect_to new_activity_path
+    # @activities = current_user.activities.all.order(created_at: :DESC)
+    # @group = Group.find_by_id(params[:group_id])
   end
 
   # GET /activities/1 or /activities/1.json
@@ -13,6 +15,7 @@ class ActivitiesController < ApplicationController
   # GET /activities/new
   def new
     @activity = Activity.new
+    @groups = current_user.groups
   end
 
   # GET /activities/1/edit
@@ -21,17 +24,19 @@ class ActivitiesController < ApplicationController
 
   # POST /activities or /activities.json
   def create
-    @activity = Activity.new(activity_params)
-
+    @activity = current_user.activities.new(activity_params)
+    
     respond_to do |format|
       if @activity.save
-        format.html { redirect_to activity_url(@activity), notice: "Activity was successfully created." }
+        @activity_group = ActivitiesGroup.create(group_params.merge(activity_id: @activity.id) )
+        format.html { redirect_to group_path(@activity_group.group_id), notice: "Activity was successfully created." }
         format.json { render :show, status: :created, location: @activity }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @activity.errors, status: :unprocessable_entity }
       end
     end
+   
   end
 
   # PATCH/PUT /activities/1 or /activities/1.json
@@ -65,6 +70,10 @@ class ActivitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def activity_params
-      params.require(:activity).permit(:name, :amount)
+      params.require(:activity).permit(:name, :amount, :author_id)
+    end
+
+    def group_params
+      params.require(:activity).permit(:group_id)
     end
 end
