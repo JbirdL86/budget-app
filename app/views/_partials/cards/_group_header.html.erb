@@ -1,0 +1,15 @@
+<div class="card w-100 mt-1">
+  <div class="g-0 d-flex align-items-center p-2">
+    <div class="w-25">
+      <img src=<%= group_icon(@group)%> alt='icon photo' class='group-icon'>
+    </div>
+    <div class="w-50 mx-3">
+      <div class="card-body">
+        <h5 class="display-6 fw-bold text-center"><%= @group.name %></h5>
+      </div>
+    </div>
+    <div class="w-25 ml-4 pl-4">
+      <h4 class="fw-bold">$ <%= total_amount(activities) %></h4>
+    </div>
+  </div>
+</div>
