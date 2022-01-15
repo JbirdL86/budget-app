@@ -1,0 +1,14 @@
+<div class='d-flex flex-column justify-content-center align-items-center splash-container'>
+  <div class='splash-wrapper d-flex flex-column justify-content-evenly'>
+    <h2 class='text-light'>TRANSACTOR APP</h2>
+    <% if user_signed_in? %>
+      <h3 class='welcome-title'>Welcome, <%= current_user.name.capitalize%></h3>
+      <p class='welcome-body'>You are signed in</p>
+      <%= link_to 'Go To Categories', groups_path, class: 'login-btn btn mb-4', id: 'go-categories' %>
+      <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: 'btn btn-light mb-2' %>
+    <%else%>
+      <%= link_to 'LOG IN', new_user_session_path, class: 'login-btn btn mb-4 py-3 text-light fw-bold' %>
+      <%= link_to 'SIGN UP', new_user_registration_path, class: 'btn btn-light mb-2 py-3' %>
+    <%end%>
+  </div>
+</div>

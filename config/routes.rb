@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :activities
   resources :groups
 
-  root "groups#index"
+  root 'splashes#index'
 end

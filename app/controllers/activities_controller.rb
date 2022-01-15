@@ -53,7 +53,7 @@ class ActivitiesController < ApplicationController
     @activity.destroy
 
     respond_to do |format|
-      format.html { redirect_to activities_url, notice: 'Activity was successfully destroyed.' }
+      format.html { redirect_to groups_path, notice: 'Activity was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

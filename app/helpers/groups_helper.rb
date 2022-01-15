@@ -6,4 +6,8 @@ module GroupsHelper
     end
     total_amount
   end
+
+  def group_icon(group)
+    "https://eu.ui-avatars.com/api/?name=#{group.icon}"
+  end
 end
