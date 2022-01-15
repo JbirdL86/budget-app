@@ -17,6 +17,8 @@
     </div>
 
     <%= link_to "Forgot password?", new_password_path('user'), class: 'align-self-center mt-3' %>
+    
+    <%= render partial: '_partials/errors/errors' %>
 
   <% end %>
 </div>
