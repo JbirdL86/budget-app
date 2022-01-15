@@ -134,7 +134,7 @@ span,
     text-transform: uppercase;
   }
 
-  color: rgb(156, 154, 154);
+  color: #9c9a9a;
 }
 
 .group-icon {
@@ -144,7 +144,7 @@ span,
 }
 
 .group-date {
-  color: rgb(156, 154, 154) !important;
+  color: #9c9a9a !important;
 }
 
 .group-total {
@@ -175,7 +175,7 @@ span,
 }
 
 .activity-list-container {
-  min-height: 65.2vh;
+  min-height: 63.2vh;
   min-width: 100%;
   position: relative;
 }
@@ -190,7 +190,7 @@ span,
   .activity-detail {
     font-size: 1rem;
     font-weight: 200;
-    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    text-shadow: 4px 4px 2px #9c9a9a;
   }
 
   .activity-body {
