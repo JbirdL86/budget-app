@@ -1,18 +1,26 @@
-<div class="nav-bar">
-  <div class="d-flex nav-left">
-    <h2>
-      Budeget App
-    </h2>
-    <%= current_user.name %>
-    <%= current_user.id %>
+<nav class="navbar navbar-dark fixed-top nav-cont">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Transactor</a>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Transactor app</h5>
+        <button type="button" class="button-close" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+      </div>
+      <div class="offcanvas-body justify-content-center d-flex flex-column">
+        <ul class="navbar-nav justify-content-evenly align-items-center flex-grow-1 pe-3">
+          <li class="nav-item">
+            <%= link_to "Groups", groups_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Logout", destroy_user_session_path, :method => :delete, class: 'nav-link' %>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div class="nav-right" >
-    <% if user_signed_in? %>
-      <%= link_to "Categories", groups_path %>
-      <%= link_to "Activities", activities_path %>
-      <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-    <% else %>
-       <%= link_to 'Login', new_user_session_path %>
-    <% end %>
-  </div>
-</div>
+</nav>
+   
+  

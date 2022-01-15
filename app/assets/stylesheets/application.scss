@@ -1,0 +1,101 @@
+/* stylelint-disable */
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+/* stylelint-enable */
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/brands";
+@import "@fortawesome/fontawesome-free/scss/v4-shims";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+.fa-user-circle {
+  width: 50%;
+  height: 100%;
+  color: #f1f3f2;
+}
+
+.splash-container {
+  background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/04/Website-Backgrounds-For-Desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.splash-wrapper {
+  height: 60%;
+}
+
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 100vh;
+  min-width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.sign-up {
+  height: 100vh;
+}
+
+.input-field {
+  height: 10%;
+  background-color: #fff;
+  color: transparent !important;
+}
+
+.new-user {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f1f3f2;
+  width: 100vw;
+}
+
+.login-container {
+  height: 100vh;
+}
+
+.nav-cont,
+.offcanvas {
+  background-image: linear-gradient(#3770c2, #5aacd4);
+}
+
+.fa-arrow-left {
+  color: #fff;
+}
+
+span,
+.navbar,
+.header-title,
+.back-button,
+.fa-arrow-left,
+.navbar-button,
+.offcanvas-header,
+.nav-link,
+.button-close {
+  color: #fff !important;
+  font-weight: 700 !important;
+  font-size: 20px;
+}
+
+.navbar-button {
+  background-color: transparent;
+  border: none;
+}
+
+.navbar-button-icon {
+  color: #fff !important;
+}
+
+.button-close {
+  background-color: transparent;
+  border: none;
+  padding: 2%;
+}
