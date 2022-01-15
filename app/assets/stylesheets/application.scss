@@ -1,0 +1,216 @@
+/* stylelint-disable */
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+/* stylelint-enable */
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/brands";
+@import "@fortawesome/fontawesome-free/scss/v4-shims";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+.fa-user-circle {
+  width: 50%;
+  height: 100%;
+  color: #f1f3f2;
+}
+
+.splash-container {
+  background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/04/Website-Backgrounds-For-Desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.splash-wrapper {
+  height: 60%;
+}
+
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 100vh;
+  min-width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.sign-up {
+  height: 100vh;
+}
+
+.input-field {
+  height: 10%;
+  background-color: #fff;
+  color: transparent !important;
+}
+
+/* stylelint-disable */
+.new_user {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f1f3f2;
+  width: 100vw;
+}
+/* stylelint-enable */
+
+.login-container {
+  height: 100vh;
+}
+
+.nav-cont,
+.offcanvas {
+  background-image: linear-gradient(#3770c2, #5aacd4);
+}
+
+.order-container {
+  background-image: linear-gradient(#3770c2, #5aacd4);
+}
+
+.fa-arrow-left {
+  color: #fff;
+}
+
+span,
+.navbar,
+.header-title,
+.back-button,
+.fa-arrow-left,
+.navbar-button,
+.offcanvas-header,
+.nav-link,
+.button-close {
+  color: #fff !important;
+  font-weight: 700 !important;
+  font-size: 20px;
+}
+
+.navbar-button {
+  background-color: transparent;
+  border: none;
+}
+
+.navbar-button-icon {
+  color: #fff !important;
+}
+
+.button-close {
+  background-color: transparent;
+  border: none;
+  padding: 2%;
+}
+
+.group-index-container {
+  background-color: #f1f3f2;
+  height: 92vh;
+  overflow: scroll;
+}
+
+.group-container {
+  min-height: 100%;
+  min-width: 100%;
+  position: relative;
+}
+
+.group-cards {
+  padding: 0 15px;
+}
+
+.group-card {
+  display: flex;
+  padding: 5px;
+  height: 100px;
+  align-items: center;
+}
+
+.group-title {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  color: #9c9a9a;
+}
+
+.group-icon {
+  width: 100%;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.group-date {
+  color: #9c9a9a !important;
+}
+
+.group-total {
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+}
+
+.new-item-btn {
+  min-width: 100%;
+  padding: 20px 0 !important;
+  background-color: #5fb523 !important;
+  color: white !important;
+
+  span {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 85px;
+  }
+
+  &:hover {
+    background-color: #7fb956 !important;
+  }
+}
+
+.add-group-container {
+  height: 90vh;
+}
+
+.activity-list-container {
+  min-height: 63.2vh;
+  min-width: 100%;
+  position: relative;
+}
+
+.activity-container {
+  width: 100%;
+  margin-top: 1.2rem;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+
+  .activity-detail {
+    font-size: 1rem;
+    font-weight: 200;
+    text-shadow: 4px 4px 2px #9c9a9a;
+  }
+
+  .activity-body {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    text-align: start;
+    padding-left: 20px;
+  }
+
+  .activity-amount {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+
+.add-activity-container {
+  height: 90vh;
+}
+
+.add-activity-form {
+  width: 100%;
+  height: 100%;
+}

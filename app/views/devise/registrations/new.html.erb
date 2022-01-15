@@ -1,0 +1,35 @@
+<div class='sign-up d-flex flex-column justify-content-center align-items-center'>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <nav class='nav-cont text-light d-flex justify-content-between align-items-center w-100 p-3 mb-4'>
+      <%= link_to root_path, class: 'back-button' do%>
+        <span><img src='https://img.icons8.com/ios-glyphs/24/ffffff/back.png'/></span>
+      <% end %>
+      <h3 class='header-title m-0 fs-2'>Register</h3>
+      <%= f.submit 'Sign up', class: 'btn mr-2 text-light display-6' %>
+    </nav>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="input-field p-3 d-flex align-items-center">
+      <i class="fas fa-user-circle fa-5x"></i>
+      <p class='upload-pic ml-2'>Upload picture</p>
+    </div>
+
+    <div class="fields">
+      <%= f.text_field :name, placeholder: 'Name', autofocus: true, autocomplete: "name", class: 'input p-2' %>
+    </div>
+
+    <div class="fields">
+      <%= f.email_field :email, placeholder: 'Email', autofocus: true, autocomplete: "email", class: 'input' %>
+    </div>
+
+    <div class="fields">
+      <%= f.password_field :password, placeholder: 'Password', autocomplete: "new-password", class: 'input' %>
+    </div>
+
+    <div class="fields">
+      <%= f.password_field :password_confirmation, placeholder: 'Confirm password', autocomplete: "new-password", class: 'input' %>
+    </div>
+
+  <% end %>
+
+</div>
