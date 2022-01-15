@@ -18,4 +18,4 @@ RSpec.feature 'Check for Groups', type: :feature do
     find('#add').click
     expect(current_path).to eq(new_group_path)
   end
-end 
+end
