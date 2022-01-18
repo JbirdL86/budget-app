@@ -1,0 +1,16 @@
+<div class="card m-3">
+  <div class="g-0 group-card">
+    <div class="w-25">
+      <img src=<%= group_icon(group)%> alt='icon photo' class='group-icon'>
+    </div>
+    <div class="w-50 mx-2">
+      <div class="card-body">
+        <h5 class="group-title display-7 fw-bold"><%= group.name %></h5>
+      </div>
+      <span class="group-date fs-6"><%= group.created_at.strftime("%d/%m/%Y")%></span>
+    </div>
+    <div class="w-25 ml-4 pl-4">
+      <h4 class="group-total">$ <%= total_amount(group.activities) %></h4>
+    </div>
+  </div>
+</div>
