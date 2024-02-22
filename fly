@@ -1,0 +1,7 @@
+Username:    postgres
+  Password:    DH5bh8mRcb9H3wt
+  Hostname:    budget-app1-hidden-snow-3712-db.internal
+  Flycast:     fdaa:6:f47b:0:1::6
+  Proxy port:  5432
+  Postgres port:  5433
+  Connection string: postgres://postgres:DH5bh8mRcb9H3wt@budget-app1-hidden-snow-3712-db.flycast:5432
